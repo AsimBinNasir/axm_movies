@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroImage from '../public/Images/hero-img.png'
+import HeroImage from '../src/Images/hero-img.png'
 import Search from './components/Search'
 import { useState } from 'react'
 

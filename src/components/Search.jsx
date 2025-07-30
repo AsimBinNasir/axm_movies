@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchIcon from '/public/Images/search.png'
+import SearchIcon from '/src/Images/search.png'
 
 const Search = ({searchTerm, setSearchTerm}) => {
   return (
