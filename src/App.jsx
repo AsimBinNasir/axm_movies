@@ -60,8 +60,17 @@ const App = () => {
   } 
 
   useEffect(() => {
-    fetchMovies(submitSearch);
-  },[submitSearch])
+    if (!submitSearch) {
+      const fetchedSearch = setTimeout(() =>{
+      fetchMovies(searchTerm);
+
+    }, 1000);
+    return () => clearTimeout(fetchedSearch);
+    } else {
+      fetchMovies(submitSearch);
+    }
+    
+  },[searchTerm,submitSearch])
   return (
     <main>
       <div className ="pattern">

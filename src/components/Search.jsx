@@ -9,6 +9,7 @@ const Search = ({searchTerm, setSearchTerm , setSubmitSearch}) => {
     if (event.key === 'Enter') {
       event.preventDefault();
       setSubmitSearch(searchTerm)
+      setSearchTerm(''); 
 
     }
   }
