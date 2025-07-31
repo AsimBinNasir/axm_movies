@@ -20,7 +20,9 @@ const API_OPTIONS = {
 
 const App = () => {
 
+
   const [searchTerm, setSearchTerm] = useState('');
+  const [submitSearch, setSubmitSearch] = useState('');
 
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -58,8 +60,8 @@ const App = () => {
   } 
 
   useEffect(() => {
-    fetchMovies(searchTerm);
-  },[searchTerm])
+    fetchMovies(submitSearch);
+  },[submitSearch])
   return (
     <main>
       <div className ="pattern">
@@ -67,7 +69,7 @@ const App = () => {
           <header>
             <img src ={HeroImage} alt="Hero Banner" />
             <h1>Find <span className='text-gradient'>Movies</span> You'll Enjoy Without Hassle</h1>
-          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} setSubmitSearch={setSubmitSearch}/>
           </header>
 
           <section className='all-movies'>
