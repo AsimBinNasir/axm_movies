@@ -1,5 +1,5 @@
 import React from 'react'
-import NoPoster from '../Images/no-poster.png'
+import NoPoster from '../Images/No-poster.png'
 import StarRating from '../Images/Rating.png'
 const MovieCard = ({ movie: { title, vote_average, poster_path, release_date, original_language } }) => {
   return (
